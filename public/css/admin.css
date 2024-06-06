@@ -1,0 +1,53 @@
+main {
+    margin: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    justify-content: center;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #000;
+}
+
+form {
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}/*# sourceMappingURL=admin.css.map */

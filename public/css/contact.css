@@ -1,0 +1,176 @@
+.Information{
+    background-color: white;
+    margin:10px auto 5px;
+    margin-top: 0%;
+    font-size: 25px;
+    min-height: 100%;
+    max-width: 60%;
+    background-color: white;
+    flex: 1; /* Занимаем все доступное пространство */
+}
+
+.header {
+    text-align: center;
+    line-height: 100px;
+}
+
+.Information label {
+    text-align: left;
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+#name {
+    margin-left: 10%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    margin-left: 11%;    
+    width: 313px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  button {
+    margin-left: 11%;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ff665c;
+  }
+
+  .calendar-popup {
+    margin-left: 20px;
+    margin-top: 20px;
+    left: 0;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+} 
+
+#modalOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+}
+
+#modalWindow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#modalButtons {
+  margin-top: 20px;
+}
+
+#modalButtons button {
+  margin: 0 10px;
+}
+
+
+/*------------------------------------*/
+
+.calendar-popup .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-popup .calendar-header .prev-month,
+.calendar-popup .calendar-header .next-month {
+    cursor: pointer;
+}
+
+.calendar-popup .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-popup .calendar-day {
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+}
+
+.calendar-popup .selected-day {
+    background-color: #ccc;
+}
+
+.error-message {
+  position:fixed;
+  width: 400px;
+  padding: 10px;
+  background-color: grey; /* красный */
+  color: white; /* белый текст */
+  border-radius: 5px; /* скругленные углы */
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2); /* тень */
+  margin-top: -120px; /* отступ сверху */
+  margin-left: 50px;
+}
+
+.tooltip {
+  position: fixed;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #333;
+  margin-left: 10px; /* Добавляем отступ слева для создания пространства между полем и блоком */
+  width: 200px;
+  margin-left: 24%;
+  margin-top: -30px;
+}
+
+.tooltip:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%; /* Изменяем значение left на right */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #000000 transparent transparent; /* Меняем порядок цветов границы */
+}

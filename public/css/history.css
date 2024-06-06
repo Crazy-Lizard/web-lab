@@ -1,0 +1,14 @@
+table td{
+    margin-right: 20px;
+    padding: 10px;
+    width: 33%;
+    text-align: center;
+  }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    justify-content: center;
+    table-layout: fixed;
+  }
