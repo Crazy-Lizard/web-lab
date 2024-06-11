@@ -1,24 +1,8 @@
 @extends('layouts.layout')
 
 @section('content')
-    <head>
-        <title>Обо мне</title>
-    </head>
+    @section('title','Обо мне')
     <body>
-        <header>
-            <menu class = "menu">
-                <p>
-                    <a href="{{ route('main') }}">Главная</a>
-                    <a href="{{ route('interests') }}">Интересы</a>
-                    <a href="{{ route('study') }}">Учёба</a>
-                    <a href="{{ route('album') }}">Фотоальбом</a>
-                    <a href="{{ route('contact') }}">Контакт</a>
-                    <a href="{{ route('test') }}">Тест</a>
-                    <a href="{{ route('history') }}">История</a>
-                    <a href="{{ route('admin') }}">Администратор</a>
-                </p>
-            </menu>
-        </header>
         <div class="about-text">
             <h1>Обо мне:</h1>
             <p>Я, Ковылин Евгений Александрович, родился 19 августа 2003 года в Украние, в г. Севастополе, являюсь гражданином Российской Федерации.</p>

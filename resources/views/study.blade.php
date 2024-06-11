@@ -1,24 +1,8 @@
 @extends('layouts.layout')
 
 @section('content')
-    <head>
-        <title>Учёба</title>
-    </head>
+    @section('title','Учёба')
     <body>
-        <header>
-            <menu class = "menu">
-                <p>
-                    <a href="{{ route('main') }}">Главная</a>
-                    <a href="{{ route('about') }}">Обо мне</a>
-                    <a href="{{ route('interests') }}">Интересы</a>
-                    <a href="{{ route('album') }}">Фотоальбом</a>
-                    <a href="{{ route('contact') }}">Контакт</a>
-                    <a href="{{ route('test') }}">Тест</a>
-                    <a href="{{ route('history') }}">История</a>
-                    <a href="{{ route('admin') }}">Администратор</a>
-                </p>
-            </menu>
-        </header>
         <div class="university">
             <div><h3>Севастопольский государственный университет</h3></div>
             <div><h5>Кафедра "Информационные системы"</h5></div>

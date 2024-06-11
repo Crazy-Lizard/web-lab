@@ -2,31 +2,17 @@
 
 @section('content')
     <head>
-        <title> Contact </title>
+        @section('title','Контакт')
         <link rel="stylesheet" href="{{ asset('css/contact.css?v=') . time() }}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     </head>
     <body>
-        <header>
-            <menu class = "menu">
-                <p>
-                    <a href="{{ route('main') }}">Главная</a>
-                    <a href="{{ route('about') }}">Обо мне</a>
-                    <a href="{{ route('interests') }}">Интересы</a>
-                    <a href="{{ route('study') }}">Учёба</a>
-                    <a href="{{ route('album') }}">Фотоальбом</a>
-                    <a href="{{ route('test') }}">Тест</a>
-                    <a href="{{ route('history') }}">История</a>
-                    <a href="{{ route('admin') }}">Администратор</a>
-                </p>
-            </menu>
-        </header>
         <div class = "header"> 
             <h1> Контакт </h1>
         </div>
-        <form class="contactForm" action="/contact/validate" style="margin-bottom: 10%">
+        <form class="contactForm" method="POST" action="/contact" style="margin-bottom: 10%">
             @csrf
             <div class="form-block">
                 <label for="fullname" class="form-block-label">ФИО</label>

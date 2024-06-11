@@ -1,0 +1,64 @@
+form {
+    margin-bottom: 20px;
+    margin-left: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Styles for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td,
+table th {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* table th {
+    background-color: #f2f2f2;
+} */
+
+/* Enhanced styles for the Information block */
+.Information {
+    /* background-color: white; */
+    margin: 10px auto 5px;
+    margin-top: 0%;
+    font-size: 25px;
+    text-align: center;
+    min-height: 100vh;
+    max-width: 60%;
+    /* background-color: white; */
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* .Information .header h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+} */

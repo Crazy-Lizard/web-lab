@@ -30,15 +30,42 @@ class ContactController extends Controller
         // Выполнение валидации
         $validator->validate($request->all());
 
-        // Проверка наличия ошибок
-        if (!empty($validator->getErrors())) {
-            return view('contact', ['error_list' => $validator->showErrors(), 'errors_data' => $validator->getErrors()]);
+        if ($request->isMethod('post')) {
+            $validator->validate($request->all());
+
+            if (!empty($validator->getErrors())) {
+                return view('contact', ['error_list' => $validator->showErrors(), 'errors_data' => $validator->getErrors()]);
+                // return $validator->showErrors();
+            } else {
+                $fullName = $request->input('fullname');
+                $birthdate = $request->input('birthday');
+                $phone = $request->input('phone');
+                $gender = $request->input('gender');
+                $age = $request->input('age');
+                $email = $request->input('email');
+                $message = $request->input('message');
+
+                $to = 'zheka.kovylin.7791@gmail.com';
+                $subject = 'Новое сообщение от ' . $fullName;
+                $body = "ФИО: $fullName\n";
+                $body .= "Телефон: $phone\n";
+                $body .= "Пол: $gender\n";
+                $body .= "Возраст: $age\n";
+                $body .= "E-mail: $email\n";
+                $body .= "Дата рождения: $birthdate\n";
+                $body .= "Сообщение: $message\n";
+
+                // Отправка электронной почты
+                mail($to, $subject, $body);
+
+                // return 'Сообщение успешно отправлено.';
+                // $email = $request->input('email');
+                // $mailtoLink = "mailto:$email";
+        
+                // return view('contact', ['mailtoLink' => $mailtoLink]);
+            }
         }
-        else {
-            $email = $request->input('email');
-            $mailtoLink = "mailto:$email";
-    
-            return view('contact', ['mailtoLink' => $mailtoLink]);
-        }
+
+        return view('contact');
     }
 }

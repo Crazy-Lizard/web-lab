@@ -1,9 +1,8 @@
 @extends('layouts.layout')
 
 @section('content')
-
+    @section('title','Фотоальбом')
     <head>
-        <title>Фотоальбом</title>
         <link href="{{ asset('css/album.css?v=') . time() }}" rel="stylesheet">        
         {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> --}}
     </head>
@@ -25,7 +24,6 @@
                 </table>
             </div>
         </div>
-        <header class="main-lizard"><h2><a href="{{ route('main') }}">Главная страница</a></h2></header>
         
         <script src = "{{ asset('js/history.js') }}"></script>
         <script src = "{{ asset('js/localHistory.js') }}"></script>

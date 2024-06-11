@@ -2,25 +2,12 @@
 
 @section('content')
     <head>
+        @section('title','История')
         <title>История</title>
         <link rel="stylesheet" href="{{ asset('css/history.css?v=') . time() }}">
     </head>
 
     <body>
-        <header>
-            <menu class = "menu">
-                <p>
-                    <a href="{{ route('main') }}">Главная</a>
-                    <a href="{{ route('about') }}">Обо мне</a>
-                    <a href="{{ route('interests') }}">Интересы</a>
-                    <a href="{{ route('study') }}">Учёба</a>
-                    <a href="{{ route('album') }}">Фотоальбом</a>
-                    <a href="{{ route('contact') }}">Контакт</a>
-                    <a href="{{ route('test') }}">Тест</a>
-                    <a href="{{ route('admin') }}">Администратор</a>
-                </p>
-            </menu>
-        </header>
         <div class="Information">
             <h1 id="Name"> История </h1>
 
